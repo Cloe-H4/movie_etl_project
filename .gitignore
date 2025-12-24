@@ -9,6 +9,12 @@ venv/
 # Ignore logs
 logs/
 
+# Ignore environment variables
+.env
+
 # Ignore Python cache
 __pycache__/
+
+# Ignore temp scripts
+scripts/temp_file.py
 
