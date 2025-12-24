@@ -1,0 +1,14 @@
+# Ignore ONLY raw MovieLens data
+data/raw/
+data/raw/*.zip
+data/raw/*.csv
+
+# Ignore virtual environment
+venv/
+
+# Ignore logs
+logs/
+
+# Ignore Python cache
+__pycache__/
+
