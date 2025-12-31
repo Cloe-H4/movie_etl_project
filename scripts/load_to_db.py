@@ -4,8 +4,6 @@ import pandas as pd
 from dotenv import load_dotenv
 from sqlalchemy import create_engine
 
-print("import completed")
-
 # setup logging
 log_file_path = os.path.join("logs", "load_to_db.log")
 os.makedirs("logs", exist_ok=True)
@@ -14,10 +12,8 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
     filename=log_file_path,
-    filemode="a"
+    filemode="w"
 )
-
-print("logging setup completed")
 
 # connect to database
 load_dotenv()
@@ -30,20 +26,14 @@ DB_PORT = os.getenv("DB_PORT")
 
 engine = create_engine(f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}")
 
-print("database connection established")
-
 # create file paths
 movies_csv_path = os.path.join("data", "raw", "movies.csv")
 ratings_csv_path = os.path.join("data", "raw", "ratings.csv")
-
-print("file paths created")
 
 # loading data using chunks for large files
 # loading movies data
 chunksize = 50000
 first_chunk = True
-
-print("beginning data load to database")
 
 logging.info("Loading movies data to database...")
 for chunk in pd.read_csv(movies_csv_path, chunksize=chunksize):
@@ -54,17 +44,13 @@ for chunk in pd.read_csv(movies_csv_path, chunksize=chunksize):
                      index=False,
                      method="multi")
         first_chunk = False
-        logging.info(f"Loaded {len(chunk)} rows...") 
+        logging.info(f"loaded {len(chunk)} rows...")
     except Exception as e:
         logging.error(f"Oops, error occurred: {e}")
 logging.info("Movies data loaded successfully.")
 
-print("movies data load completed")
-
 # loading ratings data
 first_chunk = True
-
-print("beginning ratings data load to database")
 
 logging.info("Loading ratings data to database...")
 for chunk in pd.read_csv(ratings_csv_path, chunksize=chunksize):
@@ -78,8 +64,6 @@ for chunk in pd.read_csv(ratings_csv_path, chunksize=chunksize):
         logging.info(f"loaded {len(chunk)} rows...")
     except Exception as e:
         logging.error(f"Oops, error occurred: {e}")
+
 logging.info("Ratings data loaded successfully.")
-
-print("ratings data load completed")
-
-
+logging.info("Data loading to database completed successfully.")
