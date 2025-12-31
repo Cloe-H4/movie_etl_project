@@ -1,0 +1,6 @@
+2025-12-31 05:08:29,707 - INFO - Starting data cleaning process
+2025-12-31 05:08:30,060 - INFO - Creating clean_movies table...
+2025-12-31 05:08:30,684 - INFO - clean_movies table created successfully.
+2025-12-31 05:08:30,684 - INFO - Creating clean_ratings table...
+2025-12-31 05:12:40,179 - INFO - clean_ratings table created successfully.
+2025-12-31 05:12:40,305 - INFO - Data cleaning process completed.

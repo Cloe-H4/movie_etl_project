@@ -1,0 +1,6 @@
+2025-12-31 05:52:12,630 - INFO - Starting data download...
+2025-12-31 05:52:12,642 - INFO - Old zip file removed
+2025-12-31 05:54:13,349 - INFO - New zip file downloaded successfully
+2025-12-31 05:54:13,349 - INFO - Extracting data from zip file...
+2025-12-31 05:54:23,391 - INFO - Extraction completed
+2025-12-31 05:54:23,484 - INFO - Data files are ready in raw data folder

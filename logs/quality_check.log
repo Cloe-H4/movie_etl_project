@@ -1,0 +1,30 @@
+2025-12-31 02:59:55,215 - INFO - Connected to database for quality checks
+2025-12-31 02:59:55,216 - INFO - Starting Row Count validation...
+2025-12-31 03:10:47,253 - INFO - Connected to database for quality checks
+2025-12-31 03:10:47,254 - INFO - Starting Row Count validation...
+2025-12-31 03:10:47,784 - INFO - Movies raw data count: 87585
+2025-12-31 03:10:47,784 - INFO - Movies clean data count: 87585
+2025-12-31 03:11:16,054 - INFO - Ratings raw data count: 32000204
+2025-12-31 03:11:16,054 - INFO - Ratings clean data count: 32000204
+2025-12-31 03:11:16,055 - INFO - Row count validation passed :)
+2025-12-31 03:11:16,409 - INFO - Starting Orphan count validation...
+2025-12-31 03:11:52,588 - INFO - Orphan count is 0
+2025-12-31 03:11:52,588 - INFO - Orphan count validation passed :)
+2025-12-31 03:11:52,588 - INFO - Starting Rating Range validation...
+2025-12-31 03:12:28,866 - INFO - Min rating: 0.5, Max rating: 5.0
+2025-12-31 03:12:28,866 - INFO - Rating range validation passed :)
+2025-12-31 03:12:28,866 - INFO - All quality checks passed successfully!
+2025-12-31 05:16:57,727 - INFO - Connected to database for quality checks
+2025-12-31 05:16:57,728 - INFO - Starting Row Count validation...
+2025-12-31 05:16:57,940 - INFO - Movies raw data count: 87585
+2025-12-31 05:16:57,940 - INFO - Movies clean data count: 87585
+2025-12-31 05:17:48,740 - INFO - Ratings raw data count: 32000204
+2025-12-31 05:17:48,740 - INFO - Ratings clean data count: 32000204
+2025-12-31 05:17:48,740 - INFO - Row count validation passed :)
+2025-12-31 05:17:48,740 - INFO - Starting Orphan count validation...
+2025-12-31 05:18:01,799 - INFO - Orphan count is 0
+2025-12-31 05:18:01,800 - INFO - Orphan count validation passed :)
+2025-12-31 05:18:01,800 - INFO - Starting Rating Range validation...
+2025-12-31 05:18:13,298 - INFO - Min rating: 0.5, Max rating: 5.0
+2025-12-31 05:18:13,299 - INFO - Rating range validation passed :)
+2025-12-31 05:18:13,299 - INFO - All quality checks passed successfully!
