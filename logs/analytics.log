@@ -1,0 +1,28 @@
+2025-12-31 06:16:40,549 - INFO - -------------------------------------------------------
+2025-12-31 06:16:40,867 - INFO - Connected to database for analytics operations
+2025-12-31 06:16:40,868 - INFO - Starting analytics operations
+2025-12-31 06:16:40,868 - INFO - Executing analytics query: top_10_movies
+2025-12-31 06:17:05,563 - INFO - Query top_10_movies executed successfully
+2025-12-31 06:17:05,607 - INFO - Executing analytics query: least_10_movies
+2025-12-31 06:17:30,603 - INFO - Query least_10_movies executed successfully
+2025-12-31 06:17:30,605 - INFO - Executing analytics query: top_5_genres
+2025-12-31 06:18:08,722 - INFO - Query top_5_genres executed successfully
+2025-12-31 06:18:08,725 - INFO - Executing analytics query: least_5_genres
+2025-12-31 06:18:37,393 - INFO - Query least_5_genres executed successfully
+2025-12-31 06:18:37,397 - INFO - Analytics operations completed successfully.
+2025-12-31 06:27:22,379 - INFO - -------------------------------------------------------
+2025-12-31 06:27:22,759 - INFO - Connected to database for analytics operations
+2025-12-31 06:27:22,759 - INFO - Starting analytics operations
+2025-12-31 06:27:22,760 - INFO - Executing analytics query: top_10_movies
+2025-12-31 06:27:48,835 - INFO - Query top_10_movies executed successfully
+2025-12-31 06:27:48,865 - INFO - Executing analytics query: least_10_movies
+2025-12-31 06:28:16,242 - INFO - Query least_10_movies executed successfully
+2025-12-31 06:28:16,244 - INFO - Executing analytics query: top_5_genres
+2025-12-31 06:28:49,769 - INFO - Query top_5_genres executed successfully
+2025-12-31 06:28:49,870 - INFO - Executing analytics query: least_5_genres
+2025-12-31 06:29:23,187 - INFO - Query least_5_genres executed successfully
+2025-12-31 06:29:23,190 - INFO - Analytics operations completed successfully.
+2025-12-31 10:17:31,657 - INFO - -------------------------------------------------------
+2025-12-31 10:17:46,772 - INFO - Connected to database for analytics operations
+2025-12-31 10:17:46,773 - INFO - Starting analytics operations
+2025-12-31 10:17:46,773 - INFO - Executing analytics query: top_10_movies

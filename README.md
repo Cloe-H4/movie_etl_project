@@ -4,6 +4,7 @@ This project implements an end-to-end ELT data pipeline using the MovieLens 32M 
 The pipeline automates data ingestion, cleaning, validation, transformation into a data warehouse schema, analytical querying, and scheduling using Apache Airflow.
 
 
+
 ## 🎯 Objectives
 - Download and ingest large CSV datasets programmatically
 - Load raw data into PostgreSQL staging tables
@@ -13,7 +14,7 @@ The pipeline automates data ingestion, cleaning, validation, transformation into
 - Schedule and orchestrate the pipeline using Apache Airflow
 - Apply logging, modular coding, and error handling throughout
 
----
+
 
 ## 📦 Dataset
 - **Source:** MovieLens 32M Dataset  
@@ -22,7 +23,7 @@ The pipeline automates data ingestion, cleaning, validation, transformation into
   - `movies.csv`
   - `ratings.csv`
 
----
+
 
 ## 🗄️ Database Schema
 
@@ -38,7 +39,7 @@ The pipeline automates data ingestion, cleaning, validation, transformation into
 
 This star schema enables efficient analytical queries and aggregation.
 
----
+
 
 ## 🛠️ Technologies Used
 - Python – orchestration and automation
@@ -49,7 +50,7 @@ This star schema enables efficient analytical queries and aggregation.
 - Logging module – pipeline observability
 - Git & GitHub – version control
 
----
+
 
 ## 🧱 Data Architecture
 
@@ -76,7 +77,7 @@ This star schema enables efficient analytical queries and aggregation.
 5. **Output**
    - Store analytical query results as CSV files
 
----
+
 
 ## ✅ Data Quality & Validation
 The pipeline enforces multiple data quality checks:
@@ -87,7 +88,7 @@ The pipeline enforces multiple data quality checks:
 
 If any validation fails, the pipeline stops automatically and logs the error.
 
----
+
 
 ## 📊 Analytics Performed
 The following analytics are generated daily and saved as CSV files:
@@ -96,18 +97,18 @@ The following analytics are generated daily and saved as CSV files:
 - Top 5 genres by number of ratings
 - Least 5 genres by number of ratings
 
----
+
 
 ## ⏰ Scheduling with Airflow
 The pipeline is scheduled using Apache Airflow.
 
 - **Schedule:** Daily at 12:00 PM
 - **Execution Flow:**  
-  `clean → quality_checks → warehouse → analytics`
+  `download → extract → load → clean → quality_checks → warehouse → analytics`
 
 Failures stop downstream tasks automatically.
 
----
+
 
 ## 👤 Author
 **Nchedochukwu C. Bede**

@@ -6,10 +6,6 @@ data/raw/*.csv
 # Ignore virtual environment
 venv/
 
-# Ignore empty files and folders
-scripts/analytics.py
-data/results/
-
 # Ignore environment variables
 .env
 
