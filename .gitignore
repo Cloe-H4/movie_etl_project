@@ -15,3 +15,5 @@ __pycache__/
 # Ignore temp scripts
 scripts/temp_file.py
 
+# Airflow logs
+airflow/logs/
