@@ -4,3 +4,4 @@ psycopg2-binary
 requests
 apache-airflow
 python-dotenv
+apache-airflow-providers-postgres
