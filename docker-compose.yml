@@ -1,0 +1,80 @@
+services:
+
+  # --------------------------------------------------
+  # 1. Target Data Warehouse (MovieLens DB)
+  # --------------------------------------------------
+  postgres_dw:
+    image: postgres:13
+    container_name: postgres_dw
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: movielens_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_dw_data:/var/lib/postgresql/data
+
+  # --------------------------------------------------
+  # 2. Airflow Metadata Database
+  # --------------------------------------------------
+  postgres_airflow:
+    image: postgres:13
+    container_name: postgres_airflow
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    volumes:
+      - postgres_airflow_data:/var/lib/postgresql/data
+
+  # --------------------------------------------------
+  # 3. Airflow Webserver (UI on localhost:8080)
+  # --------------------------------------------------
+  airflow-webserver:
+    build: .
+    container_name: airflow_webserver
+    command: webserver
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+    depends_on:
+      - postgres_airflow
+      - postgres_dw
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./scripts:/opt/airflow/scripts
+      - ./data:/opt/airflow/data
+      - ./airflow/logs:/opt/airflow/logs
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres_airflow/airflow
+
+  # --------------------------------------------------
+  # 4. Airflow Scheduler (Executes DAGs)
+  # --------------------------------------------------
+  airflow-scheduler:
+    build: .
+    container_name: airflow_scheduler
+    command: scheduler
+    env_file:
+      - .env
+    depends_on:
+      - postgres_airflow
+      - postgres_dw
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./scripts:/opt/airflow/scripts
+      - ./data:/opt/airflow/data
+      - ./airflow/logs:/opt/airflow/logs
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres_airflow/airflow
+
+# --------------------------------------------------
+# 5. Persistent Volumes
+# --------------------------------------------------
+volumes:
+  postgres_dw_data:
+  postgres_airflow_data:
